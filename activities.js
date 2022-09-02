@@ -8,16 +8,16 @@ const pet = {
     typeOfPet: "Labrador",
     age: 4,
     colour: "Yellow",
-    eat() {
-        console.log(`${this.name} is eating!`)
+    eat: function () {
+        return `${this.name} is eating!`;
     },
-    drink() {
-        console.log(`${this.name} is drinking!`)
+    drink: function () {
+        return `${this.name} is drinking!`;
     },
 }
 
-pet.eat()
-pet.drink()
+console.log(pet.eat())
+console.log(pet.drink())
 
 // generate a random number between 1 - 30 six times
 // for each random number check if the number is divisible by 7 or not.
@@ -26,7 +26,7 @@ pet.drink()
 let numbers = []
 
 for (i = 0; i < 6; i++) {
-    let num = Math.floor((Math.random() *30 + 1))
+    let num = Math.ceil((Math.random() * 30))
     numbers.push(num)
 }
 
@@ -44,17 +44,18 @@ const person = {
     name: "Alex",
     age: 26,
     sayHi() {
-        console.log(`Hello my name is ${this.name}`)
+        return `Hello my name is ${this.name}`
     }
 }
 
-person.sayHi()
+console.log(person.sayHi())
 
 // generate 6 random numbers between 1-50 and log them to the console
+
 let numbers2 = []
 
 for (let i = 0; i < 6; i++) {
-    let num = Math.floor((Math.random() * 50 + 1))
+    let num = Math.ceil((Math.random() * 50))
     numbers2.push(num)
 }
 
@@ -63,20 +64,23 @@ for (i = 0; i < 6; i++) {
 }
 
 // create a loop that console logs 9-0 to the screen
+
 for (let i = 9; i > -1; i--) {
     console.log(i)
 }
 
 // create a program that stores what you ate today for breakfast
 // lunch and dinner. Log these to the console.
+
 let breakfast = "Pancakes";
 let lunch = "Beans on Toast";
 let tea = "Sunday Roast";
 
-console.log(`Breakfast = ${breakfast} \nLunch = ${lunch} \nTea = ${tea}`)
+console.log(`For breakfast I had ${breakfast}.\nFor lunch I had ${lunch}.\nFor tea I had ${tea}.`)
 
 // create an array that lists your favourite films, up to 5 elements.
 // add 2 more using a method and then use a loop to cycle through the array
+
 let favouriteSongs = ["Tom Sawyer", "Limelight", "Red Barchetta"]
 
 favouriteSongs.push("Witch Hunt", "Vital Signs")
